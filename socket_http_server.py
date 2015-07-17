@@ -9,6 +9,8 @@ def create_header(code):
         header = 'HTTP/1.1 200 OK\n'
     elif code == 404:
         header = 'HTTP/1.1 404 Not Found\n'
+    elif code == 501:
+        header = 'HTTP/1.1 501 Not Implemented\n'
     header += '''Date: {}
                  Server: Nokia3310
                  Connection: close\n\n'''.format(time.strftime("%a, %d %b %Y %H:%M:%S", time.localtime()))
